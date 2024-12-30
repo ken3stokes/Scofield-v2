@@ -25,6 +25,7 @@
     "chartjs-plugin-datalabels": "^2.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "cmdk": "^1.0.4",
     "date-fns": "^3.6.0",
     "dexie": "^3.2.6",
     "dexie-react-hooks": "^1.1.7",
