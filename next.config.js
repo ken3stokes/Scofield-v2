@@ -9,9 +9,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  swcMinify: true,
+  swcMinify: false,
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: false,
   },
   experimental: {
     optimizeCss: true,
@@ -19,7 +19,7 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-  }
-};
+  },
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
