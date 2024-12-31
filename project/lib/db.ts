@@ -38,7 +38,7 @@ class ScofieldDatabase extends Dexie {
   constructor() {
     super('ScofieldDB');
     
-    this.version(2).stores({
+    this.version(40).stores({
       goals: 'id, title, priority, category, status, progress, createdAt, updatedAt',
       tasks: 'id, goalId, status, priority, dueDate'
     });

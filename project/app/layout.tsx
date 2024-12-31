@@ -11,6 +11,27 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Scofield - Goal & Project Management',
   description: 'A privacy-focused goal and project management application',
+  manifest: '/site.webmanifest',
+  icons: [
+    {
+      rel: 'icon',
+      url: '/favicon-32x32.png',
+      sizes: '32x32',
+      type: 'image/png'
+    },
+    {
+      rel: 'apple-touch-icon',
+      url: '/apple-touch-icon.png',
+      sizes: '180x180',
+      type: 'image/png'
+    },
+    {
+      rel: 'icon',
+      url: '/android-chrome-192x192.png',
+      sizes: '192x192',
+      type: 'image/png'
+    }
+  ]
 };
 
 export const dynamic = 'force-dynamic';
