@@ -25,7 +25,7 @@ export function GoalsHeader({
   return (
     <div className="flex flex-col gap-6 mb-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold">Your Goals</h1>
+        <h1 className="text-3xl font-bold">Goals Workspace</h1>
         <Button onClick={() => setShowCreateForm(true)}>
           <Plus className="h-4 w-4 mr-2" />
           Create New Goal
