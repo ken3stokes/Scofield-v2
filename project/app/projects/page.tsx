@@ -4,6 +4,8 @@ import { useDatabase } from '@/hooks/use-database';
 import { ProjectList } from '@/components/features/projects/project-list';
 import { ProjectHeader } from '@/components/features/projects/project-header';
 
+export const runtime = 'nodejs';
+
 export default function ProjectsPage() {
   const { data: projects = [], isLoading: projectsLoading } = useDatabase('projects');
   const { data: goals = [], isLoading: goalsLoading } = useDatabase('goals');

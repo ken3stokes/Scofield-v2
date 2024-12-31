@@ -5,6 +5,8 @@ import { db } from "@/lib/db";
 import { Charts } from "@/components/shared/charts";
 import { DashboardSummary } from "@/components/shared/summary";
 
+export const runtime = 'nodejs';
+
 export default function DashboardPage() {
   const goals = useLiveQuery(() => db.goals.toArray());
 

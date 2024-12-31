@@ -5,6 +5,8 @@ import { BrilliantMindSection } from "@/components/tribute/brilliant-mind-sectio
 import { PrinciplesSection } from "@/components/tribute/principles-section";
 import { LegacySection } from "@/components/tribute/legacy-section";
 
+export const runtime = 'nodejs';
+
 export default function TributePage() {
   return (
     <div className="min-h-screen">

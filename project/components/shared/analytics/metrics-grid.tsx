@@ -22,10 +22,10 @@ export function MetricsGrid({ goals }: MetricsGridProps) {
   const notStartedGoals = goals.filter(goal => goal.progress === 0).length;
   
   // Progress metrics
-  const averageProgress = goals.reduce((acc, goal) => acc + goal.progress, 0) / totalGoals || 0;
-  const highPriorityProgress = goals
+  const averageProgress = Math.round(goals.reduce((acc, goal) => acc + goal.progress, 0) / totalGoals || 0);
+  const highPriorityProgress = Math.round(goals
     .filter(goal => goal.priority === 'high' || goal.priority === 'urgent')
-    .reduce((acc, goal) => acc + goal.progress, 0) / goals.filter(goal => goal.priority === 'high' || goal.priority === 'urgent').length || 0;
+    .reduce((acc, goal) => acc + goal.progress, 0) / goals.filter(goal => goal.priority === 'high' || goal.priority === 'urgent').length || 0);
 
   // Time-based metrics
   const today = new Date();
@@ -54,9 +54,9 @@ export function MetricsGrid({ goals }: MetricsGridProps) {
       />
       <MetricCard
         title="Average Progress"
-        value={`${Math.round(averageProgress)}%`}
+        value={`${averageProgress}%`}
         icon={TrendingUp}
-        description={`${Math.round(highPriorityProgress)}% for high priority goals`}
+        description={`${highPriorityProgress}% for high priority goals`}
       />
       <MetricCard
         title="Time Management"

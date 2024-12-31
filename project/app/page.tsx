@@ -6,6 +6,8 @@ import { CTA } from '@/components/sections/cta';
 import { Footer } from '@/components/layout/footer';
 import { HomeHeader } from '@/components/layout/home-header';
 
+export const runtime = 'nodejs';
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">

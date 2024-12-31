@@ -10,6 +10,8 @@ Scofield is a privacy-focused goal and project management application that helps
 - 🎯 Prioritize tasks and set due dates
 - 🌓 Light/Dark mode support
 - 🔒 Privacy-focused with local data storage using IndexedDB
+- 🗺️ Product roadmap for upcoming features
+- 🎨 Goals Workspace for better organization
 
 ## Tech Stack
 
@@ -24,7 +26,7 @@ Scofield is a privacy-focused goal and project management application that helps
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/scofield-v2.git
+   git clone https://github.com/ken3stokes/scofield-v2.git
    cd scofield-v2/project
    ```
 
@@ -60,9 +62,18 @@ npm start
 - `/components` - React components
   - `/ui` - Base UI components
   - `/features` - Feature-specific components
+    - `/goals` - Goal management components
+    - `/tasks` - Task management components
+    - `/roadmap` - Product roadmap components
 - `/hooks` - Custom React hooks
 - `/lib` - Utility functions and database setup
 - `/public` - Static assets
+
+## Recent Updates
+
+- Added Goals Workspace feature for better goal organization
+- Implemented product roadmap to track upcoming features
+- Updated navigation structure for better feature accessibility
 
 ## Contributing
 

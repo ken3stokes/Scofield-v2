@@ -5,6 +5,8 @@ import { Switch } from '@/components/ui/switch';
 import { useTheme } from 'next-themes';
 import { DataManagement } from '@/components/features/settings/data-management';
 
+export const runtime = 'nodejs';
+
 export default function SettingsPage() {
   const { theme, setTheme } = useTheme();
 

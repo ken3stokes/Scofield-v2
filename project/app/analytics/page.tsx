@@ -7,6 +7,8 @@ import { CategoryDistribution } from '@/components/shared/analytics/category-dis
 import { PriorityDistribution } from '@/components/shared/analytics/priority-distribution';
 import type { Goal } from '@/lib/db';
 
+export const runtime = 'nodejs';
+
 export default function AnalyticsPage() {
   const { data: goals = [], isLoading, error } = useDatabase<Goal>('goals');
 

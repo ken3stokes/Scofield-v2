@@ -8,6 +8,8 @@ import { GridView } from '@/components/features/goals/views/grid-view';
 import { ListView } from '@/components/features/goals/views/list-view';
 import { useGoalsView } from '@/lib/hooks/use-goals-view';
 
+export const runtime = 'nodejs';
+
 export default function GoalsPage() {
   // Fetch goals and their tasks
   const goals = useLiveQuery(async () => {

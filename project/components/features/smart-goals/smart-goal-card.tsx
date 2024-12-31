@@ -28,9 +28,9 @@ export function SmartGoalCard({ goal }: SmartGoalCardProps) {
         <div className="space-y-2">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
             <span>Progress</span>
-            <span>{goal.progress}%</span>
+            <span>{Math.round(goal.progress)}%</span>
           </div>
-          <Progress value={goal.progress} />
+          <Progress value={Math.round(goal.progress)} />
         </div>
 
         <div className="flex items-center justify-between text-sm">

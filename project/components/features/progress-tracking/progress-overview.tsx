@@ -13,7 +13,7 @@ export function ProgressOverview({ goals }: ProgressOverviewProps) {
   const totalGoals = goals.length;
   const completedGoals = goals.filter(goal => goal.progress === 100).length;
   const inProgressGoals = goals.filter(goal => goal.progress > 0 && goal.progress < 100).length;
-  const averageProgress = goals.reduce((acc, goal) => acc + goal.progress, 0) / totalGoals || 0;
+  const averageProgress = Math.round(goals.reduce((acc, goal) => acc + goal.progress, 0) / totalGoals || 0);
 
   return (
     <div className="space-y-6">
@@ -36,7 +36,7 @@ export function ProgressOverview({ goals }: ProgressOverviewProps) {
         />
         <MetricCard
           title="Average Progress"
-          value={`${Math.round(averageProgress)}%`}
+          value={`${averageProgress}%`}
           icon={<TrendingUp className="h-5 w-5" />}
         />
       </div>

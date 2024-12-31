@@ -26,7 +26,7 @@ export function GoalProgress({ goalId, progress }: GoalProgressProps) {
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium">
-          {progress === 0 ? "Not Started" : `${progress}%`}
+          {progress === 0 ? "Not Started" : `${Math.round(progress)}%`}
         </span>
         <div className="space-x-1">
           <Button
@@ -47,7 +47,7 @@ export function GoalProgress({ goalId, progress }: GoalProgressProps) {
           </Button>
         </div>
       </div>
-      <Progress value={progress} />
+      <Progress value={Math.round(progress)} />
     </div>
   );
 }

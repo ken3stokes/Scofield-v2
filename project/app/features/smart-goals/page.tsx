@@ -5,6 +5,8 @@ import { SmartGoalsHeader } from '@/components/features/smart-goals/header';
 import { SmartGoalsContent } from '@/components/features/smart-goals/content';
 import type { Goal } from '@/lib/db';
 
+export const runtime = 'nodejs';
+
 export default function SmartGoalsPage() {
   const { data: goals = [], isLoading } = useDatabase<Goal>('goals');
 

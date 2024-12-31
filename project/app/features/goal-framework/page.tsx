@@ -5,6 +5,8 @@ import { GoalFrameworkHeader } from '@/components/features/goal-framework/header
 import { GoalFrameworkContent } from '@/components/features/goal-framework/content';
 import type { Goal } from '@/lib/db';
 
+export const runtime = 'nodejs';
+
 export default function GoalFrameworkPage() {
   const { data: goals = [], isLoading } = useDatabase<Goal>('goals');
 

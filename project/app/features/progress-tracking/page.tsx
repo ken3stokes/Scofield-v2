@@ -5,6 +5,8 @@ import { ProgressTrackingHeader } from '@/components/features/progress-tracking/
 import { ProgressTrackingContent } from '@/components/features/progress-tracking/content';
 import type { Goal } from '@/lib/db';
 
+export const runtime = 'nodejs';
+
 export default function ProgressTrackingPage() {
   const { data: goals = [], isLoading, error } = useDatabase<Goal>('goals');
 

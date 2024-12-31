@@ -26,17 +26,16 @@ export function TaskItem({ goalId, task }: TaskItemProps) {
     
     setIsUpdating(true);
     try {
-      const goal = await db.goals.get(goalId);
-      if (!goal) throw new Error('Goal not found');
-
       const newStatus = task.status === 'completed' ? 'pending' : 'completed';
-      const updatedTasks = goal.tasks.map((t) =>
-        t.id === task.id ? { ...t, status: newStatus } : t
-      );
       
-      await db.goals.update(goalId, {
-        tasks: updatedTasks,
-        progress: calculateProgress(updatedTasks)
+      // Update task status directly
+      await db.tasks.update(task.id, {
+        status: newStatus
+      });
+
+      toast({
+        title: "Success",
+        description: "Task status updated successfully.",
       });
     } catch (error) {
       console.error('Failed to update task status:', error);

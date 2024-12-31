@@ -11,7 +11,8 @@ import {
   Menu,
   BookOpen,
   ListTodo,
-  LineChart
+  LineChart,
+  Map
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/theme-toggle';
@@ -21,9 +22,10 @@ const navigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Goals', href: '/goals', icon: Target },
   { name: 'Features', items: [
-    { name: 'Goal Framework', href: '/features/goal-framework', icon: BookOpen },
+    { name: 'SMART Goals', href: '/features/smart-goals', icon: BookOpen },
     { name: 'Task Management', href: '/features/task-management', icon: ListTodo },
     { name: 'Progress Tracking', href: '/features/progress-tracking', icon: LineChart },
+    { name: 'Roadmap', href: '/roadmap', icon: Map },
   ]},
   { name: 'Analytics', href: '/analytics', icon: BarChart2 },
   { name: 'Settings', href: '/settings', icon: Settings },
